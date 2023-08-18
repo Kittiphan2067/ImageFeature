@@ -12,6 +12,10 @@ def read64(uri):
     img = cv2.imdecode(nparr, cv2.IMREAD_GRAYSCALE)
     return img
 
+@app.get("/")
+def root():
+    return {"message": "This is a ROOT..."}
+
 @app.get("/api/gethog")
 async def read_str(request : Request):
     item = await request.json()

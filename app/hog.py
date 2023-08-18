@@ -16,7 +16,7 @@ def gethog(img_gray):
     hog = cv2.HOGDescriptor(win_size, block_size, block_stride, cell_size, num_bins)
     
     # Compute the HOG Descriptor for the gray scale image
-    hog_descriptor = hog.compute(img_gray)
+    hog_descriptor = hog.compute(img_new)
     print ('HOG Descriptor:', hog_descriptor)
     return hog_descriptor
 
